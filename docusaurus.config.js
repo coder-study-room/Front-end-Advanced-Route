@@ -2,12 +2,12 @@
 module.exports = {
   title: 'Front-end Advanced Route',
   tagline: '自学前端进阶路线',
-  url: 'https://www.itdongdong.com',
+  url: 'https://coder-study-room.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'coderstudyroom', // Usually your GitHub org/user name.
+  organizationName: 'coder-study-room', // Usually your GitHub org/user name.
   projectName: 'Front-end-Advanced-Route', // Usually your repo name.
   themeConfig: {
     prism: {

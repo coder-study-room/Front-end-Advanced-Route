@@ -8,7 +8,6 @@ module.exports = {
         'level1-html',
         'level1-css',
         'level1-js',
-        'level1-http',
       ],
     },
     {
@@ -17,6 +16,8 @@ module.exports = {
       items: [
         'level2',
         'level2-build',
+        'level2-algorithm',
+        'level2-http',
         'level2-ts',
         'level2-react',
         'level2-vue',
@@ -27,8 +28,12 @@ module.exports = {
       label: '高级前端',
       items: [
         'level3',
+        'level3-charts',
         'level3-node',
         'level3-serverless',
+        'level3-flutter',
+        'level3-ios',
+        'level3-android',
       ],
     },
   ],

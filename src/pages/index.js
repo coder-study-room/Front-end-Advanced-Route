@@ -8,32 +8,26 @@ import styles from "./styles.module.css";
 
 const features = [
   {
-    title: "Easy to Use",
-    imageUrl: "img/undraw_docusaurus_mountain.svg",
+    title: "科学前端进阶路",
+    imageUrl: "img/road.svg",
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <>带你把知识串成线，连成面，印在脑中，多方位知识面，分层巩固吸收。</>
     ),
   },
   {
-    title: "Focus on What Matters",
-    imageUrl: "img/undraw_docusaurus_tree.svg",
+    title: "合理解题方法论",
+    imageUrl: "img/way.svg",
     description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
+      <>覆盖一线企业所需核心技术栈，带你整理、总结所学，化解职场疑虑。</>
     ),
   },
   {
-    title: "Powered by React",
-    imageUrl: "img/undraw_docusaurus_react.svg",
+    title: "高效前端面试经",
+    imageUrl: "img/interview.svg",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        带你理清“什么是必会题，什么是加分题”，一举冲击
+        BAT、宇宙条等大厂。
       </>
     ),
   },
@@ -48,7 +42,7 @@ function Feature({ imageUrl, title, description }) {
           <img className={styles.featureImage} src={imgUrl} alt={title} />
         </div>
       )}
-      <h3>{title}</h3>
+      <h3 className="text--center">{title}</h3>
       <p>{description}</p>
     </div>
   );
@@ -78,7 +72,7 @@ export default function Home() {
               )}
               to={useBaseUrl("docs/")}
             >
-              Get Started
+              开始学习吧！
             </Link>
           </div>
         </div>

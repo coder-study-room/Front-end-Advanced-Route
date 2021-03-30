@@ -1,9 +1,6 @@
 name: gh-pages 
 
 on:
-  pull_request:
-    branches: 
-      - master
   push:
     branches: 
       - master

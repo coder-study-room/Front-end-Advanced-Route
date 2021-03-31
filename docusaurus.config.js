@@ -3,7 +3,7 @@ module.exports = {
   title: 'Front-end Advanced Route',
   tagline: '自学前端进阶路线，系统化学习前端知识，从前端小白到大神！',
   url: 'https://coder-study-room.github.io',
-  baseUrl: '/Front-end-Advanced-Route/',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

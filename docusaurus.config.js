@@ -10,6 +10,11 @@ module.exports = {
   organizationName: 'coder-study-room', // Usually your GitHub org/user name.
   projectName: 'Front-end-Advanced-Route', // Usually your repo name.
   themeConfig: {
+    // algolia: {
+    //   apiKey: '47ecd3b21be71c5822571b9f59e52544',
+    //   indexName: 'docusaurus-2',
+    //   contextualSearch: true,
+    // },
     prism: {
       theme: require('prism-react-renderer/themes/github'),
       darkTheme: require('prism-react-renderer/themes/dracula'),

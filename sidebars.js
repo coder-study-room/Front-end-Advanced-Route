@@ -5,7 +5,14 @@ module.exports = {
       label: '初级前端',
       items: [
         'level1',
-        'level1-html',
+        {
+          'HTML': [
+            'level1-html/tag',
+            'level1-html/semantic',
+            'level1-html/doctype',
+            'level1-html/dom',
+          ],
+        },
         'level1-css',
         'level1-js',
       ],
@@ -36,5 +43,5 @@ module.exports = {
         'level3-android',
       ],
     },
-  ]
+  ],
 };

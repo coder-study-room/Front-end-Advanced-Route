@@ -40,8 +40,9 @@ module.exports = {
         },
         {
           href: 'https://github.com/coder-study-room/Front-end-Advanced-Route',
-          label: 'GitHub',
           position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         }
       ],
     },

@@ -36,5 +36,5 @@ module.exports = {
         'level3-android',
       ],
     },
-  ],
+  ]
 };

@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Front-end Advanced Route',
-  tagline: '自学前端进阶路线，系统化学习前端知识，从前端小白到大神！',
+  title: '前端进阶导航',
+  tagline: '自学前端的进阶线路，系统化学习前端知识，从前端小白到大神！',
   url: 'https://coder-study-room.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -20,7 +20,7 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/dracula'),
     },
     navbar: {
-      title: 'Front-end Advanced Route',
+      title: '前端进阶导航',
       logo: {
         alt: 'Front-end Advanced Route Logo',
         src: 'img/logo.svg',
@@ -32,6 +32,12 @@ module.exports = {
           label: '文档',
           position: 'right',
         },
+        // {
+        //   to: 'interview/',
+        //   activeBasePath: 'interview',
+        //   label: '面试',
+        //   position: 'right',
+        // },
         {
           href: 'https://www.itdongdong.com',
           label: '博客',
@@ -46,8 +52,9 @@ module.exports = {
         {
           href: 'https://github.com/coder-study-room/Front-end-Advanced-Route',
           position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
+          label: 'GitHub',
+          // className: 'header-github-link',
+          // 'aria-label': 'GitHub repository',
         }
       ],
     },
@@ -104,19 +111,22 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/edit/master/website/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+        interview:{
+          sidebarPath: require.resolve('./sidebarsInterview.js'),
         },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   // editUrl:
+        //   //   'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
-  ],
+  ]
 };

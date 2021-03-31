@@ -1273,7 +1273,7 @@
     remark-admonitions "^1.2.1"
     webpack "^4.44.1"
 
-"@docusaurus/plugin-content-docs@2.0.0-alpha.72":
+"@docusaurus/plugin-content-docs@2.0.0-alpha.72", "@docusaurus/plugin-content-docs@^2.0.0-alpha.72":
   version "2.0.0-alpha.72"
   resolved "https://npm.ekuaibao.com/@docusaurus%2fplugin-content-docs/-/plugin-content-docs-2.0.0-alpha.72.tgz#65255a0fa4fabbc5f3469b04c07f263ec93c67ac"
   integrity sha1-ZSVaD6T6u8XzRpsEwH8mPsk8Z6w=

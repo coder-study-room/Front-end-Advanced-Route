@@ -7,9 +7,8 @@
 
 
 
-
 ## 线上阅读
-网址：docs.itdongdong.com
+网址：h5.itdongdong.com
 
 ## 协议
 MIT. Copyright (c)

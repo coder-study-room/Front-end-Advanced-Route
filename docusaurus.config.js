@@ -27,7 +27,17 @@ module.exports = {
           label: '文档',
           position: 'right',
         },
-        {to: 'blog', label: '博客', position: 'right'},
+        {
+          href: 'https://www.itdongdong.com',
+          label: '博客',
+          position: 'right',
+        },
+        // {to: 'blog', label: '博客', position: 'right'},
+        {
+          href: 'https://www.aliyun.com/minisite/goods?userCode=656jmlbm',
+          label: '阿里云2折',
+          position: 'right',
+        },
         {
           href: 'https://github.com/coder-study-room/Front-end-Advanced-Route',
           label: 'GitHub',

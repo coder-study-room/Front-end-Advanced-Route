@@ -128,11 +128,11 @@ test [Bar的实例]
 
 ## 重写原型方法
 
-在使用第三方JS类库的时候，往往有时候他们定义的原型方法是不能满足我们的需要，但是又离不开这个类库，所以这时候我们就需要重写他们的原型中的一个或者多个属性或function，我们可以通过继续声明的同样的add代码的形式来达到覆盖重写前面的add功能，代码如下：
+在使用第三方 JS 类库的时候，往往有时候他们定义的原型方法是不能满足我们的需要，但是又离不开这个类库，所以这时候我们就需要重写他们的原型中的一个或者多个属性或 function，我们可以通过继续声明的同样的 add 代码的形式来达到覆盖重写前面的 add 功能，代码如下：
 
 ```js
 Calculator.prototype.add = function (x, y) {
-    return x + y + this.tax;
+  return x + y + this.tax;
 };
 ```
 
@@ -142,27 +142,27 @@ Calculator.prototype.add = function (x, y) {
 
 当查找一个对象的属性时，JavaScript 会向上遍历原型链，直到找到给定名称的属性为止。
 
-到查找到达原型链的顶部, 也就是 Object.prototype, （因为Object的原型的__proto__是null） 但是仍然没有找到指定的属性，就会返回 undefined。
+到查找到达原型链的顶部, 也就是 Object.prototype, （因为 Object 的原型的**proto**是 null） 但是仍然没有找到指定的属性，就会返回 undefined。
 
-## hasOwnProperty函数
+## hasOwnProperty 函数
 
-为了判断一个对象是否包含自定义属性而不是原型链上的属性， 我们需要使用继承自 Object.prototype 的 hasOwnProperty方法。它是 JavaScript 中唯一一个处理属性但是不查找原型链的函数。
+为了判断一个对象是否包含自定义属性而不是原型链上的属性， 我们需要使用继承自 Object.prototype 的 hasOwnProperty 方法。它是 JavaScript 中唯一一个处理属性但是不查找原型链的函数。
 
-在使用for...in遍历属性的时候，可以方便过滤是否是自身属性。
+在使用 for...in 遍历属性的时候，可以方便过滤是否是自身属性。
 
 ## 原型继承与类继承的区别
 
-| 基于类的继承 | 原型继承 |
-| -- | -- |
-| 类是不可变的。在运行时，你无法修改或者添加新的方法 |	原型是灵活的。它们可以是不可变的也可以是可变的 |
-| 类可能会不支持多重继承 |	对象可以继承多个原型对象 |
-| 基于类的继承比较复杂。你需要使用抽象类，接口和final类等等	| 原型继承比较简洁。你只有对象，你只需要对对象进行扩展就可以了|
+| 基于类的继承                                                | 原型继承                                                     |
+| ----------------------------------------------------------- | ------------------------------------------------------------ |
+| 类是不可变的。在运行时，你无法修改或者添加新的方法          | 原型是灵活的。它们可以是不可变的也可以是可变的               |
+| 类可能会不支持多重继承                                      | 对象可以继承多个原型对象                                     |
+| 基于类的继承比较复杂。你需要使用抽象类，接口和 final 类等等 | 原型继承比较简洁。你只有对象，你只需要对对象进行扩展就可以了 |
 
 ## 创建方式
 
 ### new 运算符是如何工作的
 
-造物者 Brendan Eich 想让JS和传统的面向对象的编程语言差不太多，如Java和C++。在这些语言里，我们采用 new 运算符来给类实例化一个新的对象。所以他在JS里写了一个 new 运算符:
+造物者 Brendan Eich 想让 JS 和传统的面向对象的编程语言差不太多，如 Java 和 C++。在这些语言里，我们采用 new 运算符来给类实例化一个新的对象。所以他在 JS 里写了一个 new 运算符:
 
 - C++里有用来初始化实例属性的构造函数概念，因此 new 运算符必须针对函数。
 - 我们需要将对象的方法放到一个地方去，既然我们在用原型语言，我们就把它放到函数的原型属性中去。
@@ -173,41 +173,43 @@ new 运算符接受一个函数 F 及其参数：new F(arguments...)。这一过
 2. 初始化实例。函数 F 被传入参数并调用，关键字 this 被设定为该实例。
 3. 返回实例。
 
-** 注意构造函数中的this关键字，它就代表了新创建的实例对象。**
+** 注意构造函数中的 this 关键字，它就代表了新创建的实例对象。**
 
 看个实例:
 
 ```js
 function Point(x, y) {
-    this.x = x;
-    this.y = y;
+  this.x = x;
+  this.y = y;
 }
 Point.prototype = {
-    print: function () { console.log(this.x, this.y); }
+  print: function () {
+    console.log(this.x, this.y);
+  },
 };
 
 var p1 = new Point(10, 20);
 p1.print(); // 10 20
 console.log(p1 instanceof Point); // true
 
-var p2 = New (Point)(10, 20);
+var p2 = New(Point)(10, 20);
 p2.print(); // 10 20
 console.log(p2 instanceof Point); // true
 ```
 
 ## 构造模式和原型模式对比
 
-| 构造模式 | 原型模式 |
-| -- | -- |
-| 函数式特点无法与new关键字一起使用 |	函数式特点可以与create结合使用 |
-| 忘记使用new会导致无法预期的bug并且会污染全局变量 |	由于create是一个函数，所以程序总是会按照预期工作 |
-| 使用构造函数的原型继承比较复杂并且混乱 |	使用原型的原型继承简洁易懂 |
+| 构造模式                                             | 原型模式                                           |
+| ---------------------------------------------------- | -------------------------------------------------- |
+| 函数式特点无法与 new 关键字一起使用                  | 函数式特点可以与 create 结合使用                   |
+| 忘记使用 new 会导致无法预期的 bug 并且会污染全局变量 | 由于 create 是一个函数，所以程序总是会按照预期工作 |
+| 使用构造函数的原型继承比较复杂并且混乱               | 使用原型的原型继承简洁易懂                         |
 
 ## 参考资料
 
 - [MDN: 继承与原型链](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [【翻译】JavaScript原型继承工作原理](https://www.ituring.com.cn/article/56184)
-- [Javascript继承机制的设计思想](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
-- [深入理解JavaScript系列（5）：强大的原型和原型链](https://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html)
-- [JS秘密花园: 原型](http://bonsaiden.github.io/JavaScript-Garden/zh/#object.prototype)
+- [【翻译】JavaScript 原型继承工作原理](https://www.ituring.com.cn/article/56184)
+- [Javascript 继承机制的设计思想](http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html)
+- [深入理解 JavaScript 系列（5）：强大的原型和原型链](https://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html)
+- [JS 秘密花园: 原型](http://bonsaiden.github.io/JavaScript-Garden/zh/#object.prototype)
 - [Javascript 原型拓扑](https://blog.mutoo.im/2015/01/topology-of-javascript-prototype/)

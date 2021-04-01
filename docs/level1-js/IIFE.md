@@ -1,21 +1,21 @@
 ---
 title: 立即执行函数
---- 
+---
 
 了解完函数之后，我们介绍一下立刻调用函数，也就是我们常说的自执行函数。
 
 ## 什么是自执行
 
-在JavaScript中，每个函数被调用时都会创建一个全新的上下文环境。因此，在函数内部定义的变量和函数就只能在函数内部访问，在外部无法访问，那么在该上下文环境中，调用的函数就提供了一个非常方便的方式来创建私有成员。也就是解释了JavaScript的作用域是function-level。
+在 JavaScript 中，每个函数被调用时都会创建一个全新的上下文环境。因此，在函数内部定义的变量和函数就只能在函数内部访问，在外部无法访问，那么在该上下文环境中，调用的函数就提供了一个非常方便的方式来创建私有成员。也就是解释了 JavaScript 的作用域是 function-level。
 
 ```js
 function makeCounter() {
-    // 只能在makeCounter内部访问i
-    var i = 0;
+  // 只能在makeCounter内部访问i
+  var i = 0;
 
-    return function () {
-        console.log(++i);
-    };
+  return function () {
+    console.log(++i);
+  };
 }
 ```
 
@@ -43,7 +43,7 @@ function (){ /* code */ }(); //期望是立即调用一个匿名函数表达式�
 function foo(){}(); // 分组运算符需要表达式
 ```
 
-理解了这些，我们只需要用大括弧将代码的代码全部括住就行了，**因为JavaScript里括弧()里面不能包含语句，所以在这一点上，解析器在解析function关键字的时候，会将相应的代码解析成function表达式，而不是function声明。**
+理解了这些，我们只需要用大括弧将代码的代码全部括住就行了，**因为 JavaScript 里括弧()里面不能包含语句，所以在这一点上，解析器在解析 function 关键字的时候，会将相应的代码解析成 function 表达式，而不是 function 声明。**
 
 所以那些匿名函数附近使用括号或一些一元运算符的惯用法，就是来引导解析器，指明运算符附近是一个表达式。
 
@@ -52,30 +52,54 @@ function foo(){}(); // 分组运算符需要表达式
 ```js
 // 下面2个括弧()都会立即执行
 
-(function () { /* code */ } ()); // 推荐使用这个
-(function () { /* code */ })(); // 但是这个也是可以用的
+(function () {
+  /* code */
+})(); // 推荐使用这个
+(function () {
+  /* code */
+})(); // 但是这个也是可以用的
 
 // 由于括弧()和JS的&&，异或，逗号等操作符是在函数表达式和函数声明上消除歧义的
 // 所以一旦解析器知道其中一个已经是表达式了，其它的也都默认为表达式了
 // 不过，请注意下一章节的内容解释
 
-var i = function () { return 10; } ();
-true && function () { /* code */ } ();
-0, function () { /* code */ } ();
+var i = (function () {
+  return 10;
+})();
+true &&
+  (function () {
+    /* code */
+  })();
+0,
+  (function () {
+    /* code */
+  })();
 
 // 如果你不在意返回值，或者不怕难以阅读
 // 你甚至可以在function前面加一元操作符号
 
-!function () { /* code */ } ();
-~function () { /* code */ } ();
--function () { /* code */ } ();
-+function () { /* code */ } ();
+!(function () {
+  /* code */
+})();
+~(function () {
+  /* code */
+})();
+-(function () {
+  /* code */
+})();
++(function () {
+  /* code */
+})();
 
 // 还有一个情况，使用new关键字,也可以用，但我不确定它的效率
 // http://twitter.com/kuvos/status/18209252090847232
 
-new function () { /* code */ }
-new function () { /* code */ } () // 如果需要传递参数，只需要加上括弧()
+new (function () {
+  /* code */
+})();
+new (function () {
+  /* code */
+})(); // 如果需要传递参数，只需要加上括弧()
 ```
 
 ## 自执行匿名函数和立即执行的函数表达式区别
@@ -84,32 +108,46 @@ new function () { /* code */ } () // 如果需要传递参数，只需要加上�
 
 ```js
 // 这是一个自执行的函数，函数内部执行自身，递归
-function foo() { foo(); }
+function foo() {
+  foo();
+}
 
 // 这是一个自执行的匿名函数，因为没有标示名称
 // 必须使用arguments.callee属性来执行自己
-var foo = function () { arguments.callee(); };
+var foo = function () {
+  arguments.callee();
+};
 
 // 这可能也是一个自执行的匿名函数，仅仅是foo标示名称引用它自身
 // 如果你将foo改变成其它的，你将得到一个used-to-self-execute匿名函数
-var foo = function () { foo(); };
+var foo = function () {
+  foo();
+};
 ```
 
 我们倡导的说法是立即执行函数，所以自执行其实也是一个立即执行函数。
 
 ```js
 // 有些人叫这个是自执行的匿名函数（即便它不是），因为它没有调用自身，它只是立即执行而已。
-(function () { /* code */ } ());
+(function () {
+  /* code */
+})();
 
 // 为函数表达式添加一个标示名称，可以方便Debug
 // 但一定命名了，这个函数就不再是匿名的了
-(function foo() { /* code */ } ());
+(function foo() {
+  /* code */
+})();
 
 // 立即调用的函数表达式（IIFE）也可以自执行，不过可能不常用罢了
-(function () { arguments.callee(); } ());
-(function foo() { foo(); } ());
+(function () {
+  arguments.callee();
+})();
+(function foo() {
+  foo();
+})();
 ```
 
 ## 参考资料
 
-- [深入理解JavaScript系列（4）：立即调用的函数表达式](https://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html)
+- [深入理解 JavaScript 系列（4）：立即调用的函数表达式](https://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html)

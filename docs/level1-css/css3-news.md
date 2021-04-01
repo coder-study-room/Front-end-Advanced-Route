@@ -14,7 +14,7 @@ title: CSS3新增特性
 
 ### Text-overflow
 
-它与 word-wrap 是协同工作的，word-wrap 设置或检索当当前行超过指定容器的边界时是否断开转行，而 text-overflow 则设置或检索当当前行超过指定容器的边界时如何显示, 我们在父容器设置overflow: hidden, 然后设置“text-overflow”属性，有“clip”和“ellipsis”两种可供选择。"clip"表示直接切割，"ellipsis"表示用省略号代替。
+它与 word-wrap 是协同工作的，word-wrap 设置或检索当当前行超过指定容器的边界时是否断开转行，而 text-overflow 则设置或检索当当前行超过指定容器的边界时如何显示, 我们在父容器设置 overflow: hidden, 然后设置“text-overflow”属性，有“clip”和“ellipsis”两种可供选择。"clip"表示直接切割，"ellipsis"表示用省略号代替。
 
 ## 文字渲染（Text-decoration）
 
@@ -30,7 +30,7 @@ title: CSS3新增特性
 
 ## 边框和颜色（color, border）
 
-支持rgba和hsl表示颜色, 支持圆角，阴影等效果。
+支持 rgba 和 hsl 表示颜色, 支持圆角，阴影等效果。
 
 ## CSS3 的渐变效果（Gradient）
 
@@ -51,26 +51,27 @@ title: CSS3新增特性
 ## CSS3 的盒子模型
 
 ```css
-display: -webkit-box; 
-display: -moz-box; 
--webkit-box-orient: horizontal; 
+display: -webkit-box;
+display: -moz-box;
+-webkit-box-orient: horizontal;
 -moz-box-orient: horizontal;
 ```
 
-“display: -webkit-box; display: -moz-box;”，它针对 webkit 和 gecko 浏览器定义了该元素的盒子模型。注意这里的“-webkit-box-orient: horizontal;”，他表示水平排列的盒子模型。如果配合元素的box-flex属性：
+“display: -webkit-box; display: -moz-box;”，它针对 webkit 和 gecko 浏览器定义了该元素的盒子模型。注意这里的“-webkit-box-orient: horizontal;”，他表示水平排列的盒子模型。如果配合元素的 box-flex 属性：
 
 ```css
-.flex { 
-     -webkit-box-flex: 1; 
-     -moz-box-flex: 1; 
- } 
+.flex {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+}
 
- .flex2 { 
-     -webkit-box-flex: 2; 
-     -moz-box-flex: 2; 
- }
+.flex2 {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+}
 ```
-水平方向设下的宽度，就可以按照1:2的比例关系自动去计算了。
+
+水平方向设下的宽度，就可以按照 1:2 的比例关系自动去计算了。
 
 ## CSS3 的 Transitions, Transforms 和 Animation
 
@@ -88,23 +89,23 @@ display: -moz-box;
 ### Animation
 
 ```css
-@-webkit-keyframes anim1 { 
-    0% { 
-        Opacity: 0; 
- Font-size: 12px; 
-    } 
-    100% { 
-        Opacity: 1; 
- Font-size: 24px; 
-    } 
- } 
- .anim1Div { 
-    -webkit-animation-name: anim1 ; 
-    -webkit-animation-duration: 1.5s; 
-    -webkit-animation-iteration-count: 4; 
-    -webkit-animation-direction: alternate; 
-    -webkit-animation-timing-function: ease-in-out; 
- }
+@-webkit-keyframes anim1 {
+  0% {
+    opacity: 0;
+    font-size: 12px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 24px;
+  }
+}
+.anim1Div {
+  -webkit-animation-name: anim1;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 4;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+}
 ```
 
 ## 参考资料

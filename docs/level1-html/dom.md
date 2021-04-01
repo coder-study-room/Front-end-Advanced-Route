@@ -2,7 +2,7 @@
 title: 理解DOM结构
 ---
 
-DOM: Document Object Module, 文档对象模型。我们通过JavaScript操作页面的元素，进行添加、移动、改变或移除的方法和属性, 都是DOM提供的。
+DOM: Document Object Module, 文档对象模型。我们通过 JavaScript 操作页面的元素，进行添加、移动、改变或移除的方法和属性, 都是 DOM 提供的。
 
 ## W3C DOM 标准
 
@@ -12,7 +12,7 @@ DOM: Document Object Module, 文档对象模型。我们通过JavaScript操作�
 - XML DOM - 针对 XML 文档的标准模型
 - HTML DOM - 针对 HTML 文档的标准模型
 
-## DOM节点
+## DOM 节点
 
 根据 W3C 的 HTML DOM 标准，HTML 文档中的所有内容都是节点：
 
@@ -24,7 +24,7 @@ DOM: Document Object Module, 文档对象模型。我们通过JavaScript操作�
 
 ## HTML DOM 节点树
 
-HTML文本会被解析为DOM树, 树中的所有节点均可通过 JavaScript 进行访问。所有 HTML 元素（节点）均可被修改，也可以创建或删除节点。
+HTML 文本会被解析为 DOM 树, 树中的所有节点均可通过 JavaScript 进行访问。所有 HTML 元素（节点）均可被修改，也可以创建或删除节点。
 
 ![](https://cdn.jsdelivr.net/gh/ViktorWong/imgbed/img/20210331145116.png)
 
@@ -44,6 +44,6 @@ HTML文本会被解析为DOM树, 树中的所有节点均可通过 JavaScript �
 - [W3C: Document Object Model (DOM) Technical Reports](https://www.w3.org/DOM/DOMTR)
 - [MDN: DOM API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 - [浏览器的工作原理：新式网络浏览器幕后揭秘](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
-- [开发者需要了解的WebKit](https://www.infoq.cn/article/webkit-for-developers/)
-- [理解WebKit和Chromium: HTML解析和DOM](https://blog.csdn.net/milado_nju/article/details/7886253)
-- [HTML解析原理](https://www.cnblogs.com/NetSos/archive/2010/11/29/1891194.html)
+- [开发者需要了解的 WebKit](https://www.infoq.cn/article/webkit-for-developers/)
+- [理解 WebKit 和 Chromium: HTML 解析和 DOM](https://blog.csdn.net/milado_nju/article/details/7886253)
+- [HTML 解析原理](https://www.cnblogs.com/NetSos/archive/2010/11/29/1891194.html)

@@ -1,6 +1,6 @@
 ---
 title: CSS常见布局
---- 
+---
 
 ## 'display', 'position', and 'float'三者对布局的影响
 
@@ -24,7 +24,7 @@ title: CSS常见布局
 
 ## 参考资料
 
-- [学习CSS布局](https://zh.learnlayout.com/)
-- [CSS 布局:40个教程、技巧、例子和最佳实践](https://coolshell.cn/articles/6840.html)
-- [详解css3弹性盒模型（Flexbox）](https://segmentfault.com/a/1190000000707526)
-- [CSS Grid布局：什么是网格布局](https://segmentfault.com/a/1190000002437544)
+- [学习 CSS 布局](https://zh.learnlayout.com/)
+- [CSS 布局:40 个教程、技巧、例子和最佳实践](https://coolshell.cn/articles/6840.html)
+- [详解 css3 弹性盒模型（Flexbox）](https://segmentfault.com/a/1190000000707526)
+- [CSS Grid 布局：什么是网格布局](https://segmentfault.com/a/1190000002437544)

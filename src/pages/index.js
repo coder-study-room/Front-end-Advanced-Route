@@ -94,23 +94,28 @@ export default function Home() {
             >
               开始学习吧！
             </Link>
-            <span className={styles.indexCtasGitHubButtonWrapper}>
+            {/* 暂时不展示 */}
+            {/* <span className={styles.indexCtasGitHubButtonWrapper}>
               <iframe
                 className={styles.indexCtasGitHubButton}
-                src="https://ghbtns.com/github-btn.html?user=facebook&amp;repo=docusaurus&amp;type=star&amp;count=true&amp;size=large"
+                src="https://ghbtns.com/github-btn.html?user=coder-study-room&amp;repo=Front-end-Advanced-Route&amp;type=star&amp;count=true&amp;size=large"
                 width={160}
                 height={30}
                 title="GitHub Stars"
               />
-            </span>
+            </span> */}
           </div>
         </div>
       </div>
       <div className={clsx(styles.announcement, styles.announcementDark)}>
-          <div className={styles.announcementInner}>
-            有任何疑问，请关注公众号：程序员自习室，一起探讨交流学习！
-          </div>
+        <div className={styles.announcementInner}>
+          有任何疑问，请关注公众号：
+          <Link to="https://cdn.jsdelivr.net/gh/ViktorWong/imgbed/img/20210401170546.png">
+            程序员自习室
+          </Link>
+          ，一起探讨交流学习！
         </div>
+      </div>
       <main>
         {features && features.length > 0 && (
           <section className={styles.features}>

@@ -112,7 +112,9 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          // editUrl:
+          editUrl:
+          'https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/'
+          
           //   'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         interview:{

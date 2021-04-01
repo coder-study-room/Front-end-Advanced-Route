@@ -41,6 +41,8 @@ module.exports = {
             'level1-js/IIFE',
             'level1-js/closure',
             'level1-js/events',
+            'level1-js/prototype',
+            'level1-js/this',
           ]
         }
       ],

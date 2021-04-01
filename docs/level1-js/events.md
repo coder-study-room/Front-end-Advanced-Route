@@ -8,7 +8,7 @@ JavaScript是一套使用事件机制较多的语言，特别是与DOM交互的�
 
 ### HTML内联属性
 
-类似<button onclick="alert('你点击了这个按钮');">点击这个按钮</button>的方式，这种方式会使JS与HTML高度耦合，不利于开发和维护，不推荐使用。
+类似```<button onclick="alert('你点击了这个按钮');">```点击这个按钮```</button>```的方式，这种方式会使JS与HTML高度耦合，不利于开发和维护，不推荐使用。
 
 ### DOM属性绑定
 
@@ -16,7 +16,7 @@ JavaScript是一套使用事件机制较多的语言，特别是与DOM交互的�
 
 ### 事件监听函数
 
-使用事件监听函数element.addEventListener(<event-name>, <callback>, <use-capture>);，在 element 这个对象上面添加一个事件监听器，当监听到有 事件发生的时候，调用 这个回调函数。至于 这个参数，表示该事件监听是在“捕获”阶段中监听（设置为 true）还是在“冒泡”阶段中监听（设置为 false）。
+使用事件监听函数element.addEventListener(```<event-name>, <callback>, <use-capture>```);，在 element 这个对象上面添加一个事件监听器，当监听到有 事件发生的时候，调用 这个回调函数。至于 这个参数，表示该事件监听是在“捕获”阶段中监听（设置为 true）还是在“冒泡”阶段中监听（设置为 false）。
 
 ## 移除事件监听
 
@@ -151,7 +151,7 @@ for (i in window) {
 
 ### IE下绑定事件
 
-在 IE 下面绑定一个事件监听，在 IE9之前的版本中无法使用标准的 addEventListener 函数，而是使用自家的 attachEvent，具体用法：element.attachEvent(<event-name>, <callback>);
+在 IE 下面绑定一个事件监听，在 IE9之前的版本中无法使用标准的 addEventListener 函数，而是使用自家的 attachEvent，具体用法：element.attachEvent(```<event-name>, <callback>```);
 
 它只支持监听在冒泡阶段触发的事件，所以为了统一，在使用标准事件监听函数的时候，第三参数传递 false。
 

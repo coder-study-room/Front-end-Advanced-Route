@@ -26,9 +26,6 @@ module.exports = {
       content:
         '⭐️ If you like, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/coder-study-room/Front-end-Advanced-Route">GitHub</a>! ⭐️',
     },
-    gtag: {
-      trackingID: 'UA-141789564-1',
-    },
     // algolia: {
     //   apiKey: '47ecd3b21be71c5822571b9f59e52544',
     //   indexName: 'docusaurus-2',

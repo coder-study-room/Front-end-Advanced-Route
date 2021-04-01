@@ -51,7 +51,7 @@ function Feature({ imageUrl, title, description }) {
         </div>
       )}
       <h3 className="text--center">{title}</h3>
-      <p style={{textAlign:'center'}}>{description}</p>
+      <p style={{ textAlign: "center" }}>{description}</p>
     </div>
   );
 }
@@ -93,9 +93,10 @@ export default function Home() {
               className={styles.heroLogo}
               src={useBaseUrl("/img/logo.svg")}
             />
+            
             <span className={styles.heroTitleTextHtml}>
-              自学前端的<b>进阶</b>线路，<b>系统化</b>学习前端知识，从前端小白到
-              <b>大神</b>！
+              自学前端的<b>进阶</b>线路，
+              <b>系统化</b>学习前端知识，从前端小白到<b>大神</b>
             </span>
           </h1>
           <div className={styles.indexCtas}>

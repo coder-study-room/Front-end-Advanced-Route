@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
+import Image from "@theme/IdealImage";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
@@ -27,6 +28,16 @@ const features = [
     description: (
       <>带你理清“什么是必会题，什么是加分题”，一举冲击 BAT、宇宙条等大厂。</>
     ),
+  },
+];
+
+const QUOTES = [
+  {
+    thumbnail: require("../data/reactor.png"),
+    name: "Viktor",
+    title: "前端👨‍💻‍",
+    text: "如果这些内容可以帮到你，可以请我喝果汁 🍹",
+    link: "https://lib.itdongdong.com/zhifubao.png",
   },
 ];
 
@@ -129,6 +140,31 @@ export default function Home() {
           </section>
         )}
       </main>
+      <div className={clsx(styles.section, styles.sectionAlt)}>
+        <div className="container">
+          <div className="row">
+            {QUOTES.map((quote) => (
+              <div className="col" key={quote.name}>
+                <div className="avatar avatar--vertical margin-bottom--sm">
+                  <Image
+                    alt={quote.name}
+                    className="avatar__photo avatar__photo--xl"
+                    img={quote.thumbnail}
+                    style={{ overflow: "hidden" }}
+                  />
+                  <div className="avatar__intro padding-top--sm">
+                    <h4 className="avatar__name">{quote.name}</h4>
+                    <small className="avatar__subtitle">{quote.title}</small>
+                  </div>
+                </div>
+                <p className="text--center text--italic padding-horiz--md">
+                  <Link to={quote.link}>{quote.text}</Link>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>前端进阶导航 Blog</title>
+        <title>前端进阶导航(2021版) Blog</title>
         <link>https://coder-study-room.github.io/blog</link>
-        <description>前端进阶导航 Blog</description>
+        <description>前端进阶导航(2021版) Blog</description>
         <lastBuildDate>Thu, 30 May 2019 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>

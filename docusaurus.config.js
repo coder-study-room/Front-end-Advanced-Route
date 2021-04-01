@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: '前端进阶导航',
+  title: '前端进阶导航(2021版)',
   tagline: '自学前端的进阶线路，系统化学习前端知识，从前端小白到大神！',
   url: 'https://coder-study-room.github.io',
   baseUrl: '/',
@@ -10,6 +10,7 @@ module.exports = {
   organizationName: 'coder-study-room', // Usually your GitHub org/user name.
   projectName: 'Front-end-Advanced-Route', // Usually your repo name.
   themeConfig: {
+    hideableSidebar:true,
     // algolia: {
     //   apiKey: '47ecd3b21be71c5822571b9f59e52544',
     //   indexName: 'docusaurus-2',
@@ -20,7 +21,7 @@ module.exports = {
       darkTheme: require('prism-react-renderer/themes/dracula'),
     },
     navbar: {
-      title: '前端进阶导航',
+      title: '前端进阶导航(2021版)',
       logo: {
         alt: 'Front-end Advanced Route Logo',
         src: 'img/logo.svg',

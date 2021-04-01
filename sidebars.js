@@ -11,10 +11,37 @@ module.exports = {
             'level1-html/semantic',
             'level1-html/doctype',
             'level1-html/dom',
+            'level1-html/what-is-html5',
+            'level1-html/meta',
+            'level1-html/meta-viewport',
           ],
         },
-        'level1-css',
-        'level1-js',
+        {
+          'CSS': [
+            'level1-css/css-property',
+            'level1-css/css-write',
+            'level1-css/box-module',
+            'level1-css/css-normal-flow',
+            'level1-css/css-position',
+            'level1-css/css-float',
+            'level1-css/css-selector',
+            'level1-css/css-layout',
+            'level1-css/css3-news',
+            'level1-css/css-baseline',
+            'level1-css/css-animations',
+          ],
+        },
+        {
+          'JavaScript':[
+            'level1-js/scope',
+            'level1-js/operate-priority',
+            'level1-js/variable-object',
+            'level1-js/undefined-and-null',
+            'level1-js/function',
+            'level1-js/IIFE',
+            'level1-js/closure',
+          ]
+        }
       ],
     },
     {

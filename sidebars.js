@@ -40,6 +40,7 @@ module.exports = {
             'level1-js/function',
             'level1-js/IIFE',
             'level1-js/closure',
+            'level1-js/events',
           ]
         }
       ],

@@ -1,6 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: '前端进阶导航(2021版)',
+  titleDelimiter: '🦖', // Defaults to `|`
   tagline: '自学前端的进阶线路，系统化学习前端知识，从前端小白到大神！',
   url: 'https://coder-study-room.github.io',
   baseUrl: '/',
@@ -33,6 +34,11 @@ module.exports = {
           label: '文档',
           position: 'right',
         },
+        {
+          href: 'https://juejin.cn/user/149189280672616/posts',
+          label: '掘金',
+          position: 'right',
+        },
         // {
         //   to: 'interview/',
         //   activeBasePath: 'interview',
@@ -54,13 +60,29 @@ module.exports = {
           href: 'https://github.com/coder-study-room/Front-end-Advanced-Route',
           position: 'right',
           label: 'GitHub',
-          // className: 'header-github-link',
-          // 'aria-label': 'GitHub repository',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         }
       ],
     },
     footer: {
       style: 'dark',
+      // links: [
+      //   {
+      //     title: 'Docs',
+      //     items: [
+      //       {
+      //         label: 'Docs',
+      //         to: 'docs/doc1',
+      //       },
+      //     ],
+      //   },
+      //   // ... other links
+      // ],
+      // logo: {
+      //   alt: '程序员自习室开源',
+      //   src: 'https://docusaurus.io/img/oss_logo.png',
+      // },
       // links: [
       //   {
       //     title: 'Docs',

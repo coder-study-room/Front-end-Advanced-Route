@@ -25,10 +25,7 @@ const features = [
     title: "高效前端面试经",
     imageUrl: "img/interview.svg",
     description: (
-      <>
-        带你理清“什么是必会题，什么是加分题”，一举冲击
-        BAT、宇宙条等大厂。
-      </>
+      <>带你理清“什么是必会题，什么是加分题”，一举冲击 BAT、宇宙条等大厂。</>
     ),
   },
 ];
@@ -56,7 +53,7 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      {/* <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <img
             className={clsx(styles.heroBannerLogo, "margin-vert--md")}
@@ -76,7 +73,44 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </header>
+      </header> */}
+      <div className={styles.hero}>
+        <div className={styles.heroInner}>
+          <h1 className={styles.heroProjectTagline}>
+            <img
+              alt="Docusaurus with Keytar"
+              className={styles.heroLogo}
+              src={useBaseUrl("/img/logo.svg")}
+            />
+            <span className={styles.heroTitleTextHtml}>
+              自学前端的<b>进阶</b>线路，<b>系统化</b>学习前端知识，从前端小白到
+              <b>大神</b>！
+            </span>
+          </h1>
+          <div className={styles.indexCtas}>
+            <Link
+              className={clsx("button button--primary")}
+              to={useBaseUrl("docs/")}
+            >
+              开始学习吧！
+            </Link>
+            <span className={styles.indexCtasGitHubButtonWrapper}>
+              <iframe
+                className={styles.indexCtasGitHubButton}
+                src="https://ghbtns.com/github-btn.html?user=facebook&amp;repo=docusaurus&amp;type=star&amp;count=true&amp;size=large"
+                width={160}
+                height={30}
+                title="GitHub Stars"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className={clsx(styles.announcement, styles.announcementDark)}>
+          <div className={styles.announcementInner}>
+            有任何疑问，请关注公众号：程序员自习室，一起探讨交流学习！
+          </div>
+        </div>
       <main>
         {features && features.length > 0 && (
           <section className={styles.features}>

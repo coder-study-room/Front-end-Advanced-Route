@@ -10,8 +10,25 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'coder-study-room', // Usually your GitHub org/user name.
   projectName: 'Front-end-Advanced-Route', // Usually your repo name.
+  themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
+    liveCodeBlock: {
+      playgroundPosition: 'bottom',
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     hideableSidebar:true,
+    announcementBar: {
+      id: 'supportus',
+      content:
+        '⭐️ If you like, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/coder-study-room/Front-end-Advanced-Route">GitHub</a>! ⭐️',
+    },
+    gtag: {
+      trackingID: 'UA-141789564-1',
+    },
     // algolia: {
     //   apiKey: '47ecd3b21be71c5822571b9f59e52544',
     //   indexName: 'docusaurus-2',
@@ -23,9 +40,11 @@ module.exports = {
     },
     navbar: {
       title: '前端进阶导航(2021版)',
+      hideOnScroll: true,
       logo: {
         alt: 'Front-end Advanced Route Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo.svg',
       },
       items: [
         {

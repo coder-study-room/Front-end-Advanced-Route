@@ -51,7 +51,7 @@ function Feature({ imageUrl, title, description }) {
         </div>
       )}
       <h3 className="text--center">{title}</h3>
-      <p>{description}</p>
+      <p style={{textAlign:'center'}}>{description}</p>
     </div>
   );
 }

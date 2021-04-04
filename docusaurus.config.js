@@ -1,28 +1,28 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: '前端进阶导航(2021版)',
-  titleDelimiter: '🦖', // Defaults to `|`
-  tagline: '自学前端的进阶线路，系统化学习前端知识，从前端小白到大神！',
-  url: 'https://coder-study-room.github.io',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'coder-study-room', // Usually your GitHub org/user name.
-  projectName: 'Front-end-Advanced-Route', // Usually your repo name.
-  themes: ['@docusaurus/theme-live-codeblock'],
+  title: "前端进阶导航(2021版)",
+  titleDelimiter: "🦖", // Defaults to `|`
+  tagline: "自学前端的进阶线路，系统化学习前端知识，从前端小白到大神！",
+  url: "https://coder-study-room.github.io",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "coder-study-room", // Usually your GitHub org/user name.
+  projectName: "Front-end-Advanced-Route", // Usually your repo name.
+  themes: ["@docusaurus/theme-live-codeblock"],
   themeConfig: {
     liveCodeBlock: {
-      playgroundPosition: 'bottom',
+      playgroundPosition: "bottom",
     },
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: "light",
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    hideableSidebar:true,
+    hideableSidebar: true,
     announcementBar: {
-      id: 'supportus',
+      id: "supportus",
       content:
         '⭐️ If you like, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/coder-study-room/Front-end-Advanced-Route">GitHub</a>! ⭐️',
     },
@@ -32,28 +32,28 @@ module.exports = {
     //   contextualSearch: true,
     // },
     prism: {
-      theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/dracula'),
+      theme: require("prism-react-renderer/themes/github"),
+      darkTheme: require("prism-react-renderer/themes/dracula"),
     },
     navbar: {
-      title: '前端进阶导航(2021版)',
+      title: "前端进阶导航(2021版)",
       hideOnScroll: true,
       logo: {
-        alt: 'Front-end Advanced Route Logo',
-        src: 'img/logo.svg',
-        srcDark: 'img/logo.svg',
+        alt: "Front-end Advanced Route Logo",
+        src: "img/logo.svg",
+        srcDark: "img/logo.svg",
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: '文档',
-          position: 'right',
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "文档",
+          position: "right",
         },
         {
-          href: 'https://juejin.cn/user/149189280672616/posts',
-          label: '掘金',
-          position: 'right',
+          href: "https://juejin.cn/user/149189280672616/posts",
+          label: "掘金",
+          position: "right",
         },
         // {
         //   to: 'interview/',
@@ -62,27 +62,27 @@ module.exports = {
         //   position: 'right',
         // },
         {
-          href: 'https://www.itdongdong.com',
-          label: '博客',
-          position: 'right',
+          href: "https://www.itdongdong.com",
+          label: "博客",
+          position: "right",
         },
         // {to: 'blog', label: '博客', position: 'right'},
         {
-          href: 'https://www.aliyun.com/minisite/goods?userCode=656jmlbm',
-          label: '阿里云2折',
-          position: 'right',
+          href: "https://www.aliyun.com/minisite/goods?userCode=656jmlbm",
+          label: "阿里云2折",
+          position: "right",
         },
         {
-          href: 'https://github.com/coder-study-room/Front-end-Advanced-Route',
-          position: 'right',
-          label: 'GitHub',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
-        }
+          href: "https://github.com/coder-study-room/Front-end-Advanced-Route",
+          position: "right",
+          label: "GitHub",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
+        },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       // links: [
       //   {
       //     title: 'Docs',
@@ -145,18 +145,24 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           // Please change this to your repo.
           editUrl:
-          'https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/'
-          
+            "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
+
           //   'https://github.com/facebook/docusaurus/edit/master/website/',
         },
-        interview:{
-          sidebarPath: require.resolve('./sidebarsInterview.js'),
+        interview: {
+          sidebarPath: require.resolve("./sidebarsInterview.js"),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          editUrl:
+            "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
         },
         // blog: {
         //   showReadingTime: true,
@@ -165,14 +171,27 @@ module.exports = {
         //   //   'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         // },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
   ],
   plugins: [
     [
-      '@docusaurus/plugin-ideal-image',
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "interview",
+        path: "interview",
+        editUrl: "https://github.com/facebook/docusaurus/edit/master/website",
+        editCurrentVersion: true,
+        routeBasePath: "interview",
+        sidebarPath: require.resolve("./sidebarsInterview.js"),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-ideal-image",
       {
         quality: 70,
         max: 1030, // max resized image's size.
@@ -180,5 +199,5 @@ module.exports = {
         steps: 2, // the max number of images generated between min and max (inclusive)
       },
     ],
-  ]
+  ],
 };

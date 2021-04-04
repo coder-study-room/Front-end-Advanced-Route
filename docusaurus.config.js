@@ -47,8 +47,14 @@ module.exports = {
         {
           to: "docs/",
           activeBasePath: "docs",
-          label: "文档",
-          position: "right",
+          label: "前端进阶",
+          position: "left",
+        },
+        {
+          to: "interview/",
+          activeBasePath: "interview",
+          label: "前端面试",
+          position: "left",
         },
         {
           href: "https://juejin.cn/user/149189280672616/posts",
@@ -149,20 +155,14 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
+          editUrl:"https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
 
           //   'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         interview: {
           sidebarPath: require.resolve("./sidebarsInterview.js"),
-          showLastUpdateAuthor: true,
-          showLastUpdateTime: true,
-          editUrl:
-            "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
+          editUrl:"https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
         },
         // blog: {
         //   showReadingTime: true,
@@ -182,7 +182,7 @@ module.exports = {
       {
         id: "interview",
         path: "interview",
-        editUrl: "https://github.com/facebook/docusaurus/edit/master/website",
+        editUrl: "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
         editCurrentVersion: true,
         routeBasePath: "interview",
         sidebarPath: require.resolve("./sidebarsInterview.js"),

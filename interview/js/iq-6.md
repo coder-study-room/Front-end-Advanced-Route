@@ -1,3 +1,3 @@
 ---
-title: 6、什么是DOM？
+title: 6. 什么是DOM？
 ---

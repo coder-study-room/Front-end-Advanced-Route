@@ -1,3 +1,3 @@
 ---
-title: 8、React 中的 state 是什么？
+title: 8. React 中的 state 是什么？
 ---

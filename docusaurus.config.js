@@ -54,16 +54,17 @@ module.exports = {
               label: "前端进阶",
             },
             {
-              to: "interview/",
-              activeBasePath: "interview",
-              label: "前端面试",
-            },
-            {
               to: "weekly/",
               activeBasePath: "weekly",
               label: "前端精读",
             }
           ],
+        },
+        {
+          to: "interview/",
+          activeBasePath: "interview",
+          label: "前端面试",
+          position: 'left'
         },
         {
           href: "https://juejin.cn/user/149189280672616/posts",

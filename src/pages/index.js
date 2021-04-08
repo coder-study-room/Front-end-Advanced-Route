@@ -102,7 +102,7 @@ export default function Home() {
           <div className={styles.indexCtas}>
             <Link
               className={clsx("button button--primary")}
-              to={useBaseUrl("docs/")}
+              to={useBaseUrl("weekly/")}
             >
               开始学习吧！
             </Link>

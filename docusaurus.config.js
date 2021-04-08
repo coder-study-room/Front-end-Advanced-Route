@@ -57,16 +57,16 @@ module.exports = {
           position: "left",
         },
         {
+          to: "weekly/",
+          activeBasePath: "weekly",
+          label: "前端精读",
+          position: "left",
+        },
+        {
           href: "https://juejin.cn/user/149189280672616/posts",
           label: "掘金",
           position: "right",
         },
-        // {
-        //   to: 'interview/',
-        //   activeBasePath: 'interview',
-        //   label: '面试',
-        //   position: 'right',
-        // },
         {
           href: "https://www.itdongdong.com",
           label: "博客",
@@ -89,63 +89,42 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Docs',
-      //         to: 'docs/doc1',
-      //       },
-      //     ],
-      //   },
-      //   // ... other links
-      // ],
-      // logo: {
-      //   alt: '程序员自习室开源',
-      //   src: 'https://docusaurus.io/img/oss_logo.png',
-      // },
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Getting Started',
-      //         to: 'docs/',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: '社区',
-      //     items: [
-      //       {
-      //         label: '掘金',
-      //         href: 'https://juejin.cn/user/149189280672616',
-      //       },
-      //       {
-      //         label: 'Discord',
-      //         href: 'https://discordapp.com/invite/docusaurus',
-      //       },
-      //       {
-      //         label: '程序员自习室',
-      //         href: 'https://twitter.com/docusaurus',
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: '更多',
-      //     items: [
-      //       {
-      //         label: 'Blog',
-      //         to: 'blog',
-      //       },
-      //       {
-      //         label: 'GitHub',
-      //         href: 'https://github.com/facebook/docusaurus',
-      //       },
-      //     ],
-      //   },
-      // ],
+      logo: {
+        alt: "程序员自习室开源",
+        src: "https://docusaurus.io/img/oss_logo.png",
+      },
+      links: [
+        {
+          title: "社区",
+          items: [
+            {
+              label: "掘金",
+              href: "https://juejin.cn/user/149189280672616",
+            },
+            {
+              label: "Discord",
+              href: "https://discordapp.com/invite/docusaurus",
+            },
+            {
+              label: "程序员自习室",
+              href: "https://twitter.com/docusaurus",
+            },
+          ],
+        },
+        {
+          title: "更多",
+          items: [
+            {
+              label: "Blog",
+              to: "blog",
+            },
+            {
+              label: "GitHub",
+              href: "https://github.com/facebook/docusaurus",
+            },
+          ],
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} 程序员自习室 <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17131802号</a>`,
     },
   },
@@ -155,14 +134,18 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl:"https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
-
-          //   'https://github.com/facebook/docusaurus/edit/master/website/',
+          editUrl:
+            "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
         },
         interview: {
           sidebarPath: require.resolve("./sidebarsInterview.js"),
-          editUrl:"https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
+          editUrl:
+            "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
+        },
+        weekly: {
+          sidebarPath: require.resolve("./sidebarsWeekly.js"),
+          editUrl:
+            "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
         },
         // blog: {
         //   showReadingTime: true,
@@ -182,10 +165,25 @@ module.exports = {
       {
         id: "interview",
         path: "interview",
-        editUrl: "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
+        editUrl:
+          "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
         editCurrentVersion: true,
         routeBasePath: "interview",
         sidebarPath: require.resolve("./sidebarsInterview.js"),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "weekly",
+        path: "weekly",
+        editUrl:
+          "https://github.com/coder-study-room/Front-end-Advanced-Route/edit/master/",
+        editCurrentVersion: true,
+        routeBasePath: "weekly",
+        sidebarPath: require.resolve("./sidebarsWeekly.js"),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       },

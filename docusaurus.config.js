@@ -45,22 +45,25 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "前端进阶",
           position: "left",
-        },
-        {
-          to: "interview/",
-          activeBasePath: "interview",
-          label: "前端面试",
-          position: "left",
-        },
-        {
-          to: "weekly/",
-          activeBasePath: "weekly",
-          label: "前端精读",
-          position: "left",
+          label: "前端学习",
+          items: [
+            {
+              to: "docs/",
+              activeBasePath: "docs",
+              label: "前端进阶",
+            },
+            {
+              to: "interview/",
+              activeBasePath: "interview",
+              label: "前端面试",
+            },
+            {
+              to: "weekly/",
+              activeBasePath: "weekly",
+              label: "前端精读",
+            }
+          ],
         },
         {
           href: "https://juejin.cn/user/149189280672616/posts",
@@ -81,9 +84,8 @@ module.exports = {
         {
           href: "https://github.com/coder-study-room/Front-end-Advanced-Route",
           position: "right",
-          label: "GitHub",
-          className: "header-github-link",
-          "aria-label": "GitHub repository",
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },

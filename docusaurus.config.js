@@ -96,38 +96,38 @@ module.exports = {
         alt: "程序员自习室开源",
         src: "https://docusaurus.io/img/oss_logo.png",
       },
-      links: [
-        {
-          title: "社区",
-          items: [
-            {
-              label: "掘金",
-              href: "https://juejin.cn/user/149189280672616",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "程序员自习室",
-              href: "https://twitter.com/docusaurus",
-            },
-          ],
-        },
-        {
-          title: "更多",
-          items: [
-            {
-              label: "Blog",
-              to: "blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
-          ],
-        },
-      ],
+      // links: [
+      //   {
+      //     title: "社区",
+      //     items: [
+      //       {
+      //         label: "掘金",
+      //         href: "https://juejin.cn/user/149189280672616",
+      //       },
+      //       {
+      //         label: "Discord",
+      //         href: "https://discordapp.com/invite/docusaurus",
+      //       },
+      //       {
+      //         label: "程序员自习室",
+      //         href: "https://twitter.com/docusaurus",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "更多",
+      //     items: [
+      //       {
+      //         label: "Blog",
+      //         to: "blog",
+      //       },
+      //       {
+      //         label: "GitHub",
+      //         href: "https://github.com/facebook/docusaurus",
+      //       },
+      //     ],
+      //   },
+      // ],
       copyright: `Copyright © ${new Date().getFullYear()} 程序员自习室 <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备17131802号</a>`,
     },
   },

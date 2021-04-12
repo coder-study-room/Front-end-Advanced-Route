@@ -44,26 +44,38 @@ module.exports = {
         srcDark: "img/logo.svg",
       },
       items: [
+        // {
+        //   position: "left",
+        //   label: "前端学习",
+        //   items: [
+        //     {
+        //       to: "docs/",
+        //       activeBasePath: "docs",
+        //       label: "前端进阶",
+        //     },
+        //     {
+        //       to: "weekly/",
+        //       activeBasePath: "weekly",
+        //       label: "前端精读",
+        //     }
+        //   ],
+        // },
         {
-          position: "left",
-          label: "前端学习",
-          items: [
-            {
-              to: "docs/",
-              activeBasePath: "docs",
-              label: "前端进阶",
-            },
-            {
-              to: "weekly/",
-              activeBasePath: "weekly",
-              label: "前端精读",
-            }
-          ],
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "进阶",
+          position: 'left'
+        },
+        {
+          to: "weekly/",
+          activeBasePath: "weekly",
+          label: "精读",
+          position: 'left'
         },
         {
           to: "interview/",
           activeBasePath: "interview",
-          label: "前端面试",
+          label: "面试",
           position: 'left'
         },
         {

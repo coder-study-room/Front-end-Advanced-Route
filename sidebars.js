@@ -84,5 +84,12 @@ module.exports = {
         "level3-android",
       ],
     },
+    {
+      type: "category",
+      label: "微信小程序",
+      items: [
+        "weapp/contents"
+      ]
+    }
   ],
 };

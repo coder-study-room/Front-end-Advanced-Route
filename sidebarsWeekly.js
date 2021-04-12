@@ -3,7 +3,7 @@ Author: Viktor (victor318x@gmail.com)
 sideWeekly.js (c) 2021
 Desc: description
 Created:  4/8/2021, 1:51:55 PM
-Modified: 4/9/2021, 4:42:23 PM
+Modified: 4/12/2021, 10:49:03 AM
 */
 
 module.exports = {
@@ -202,6 +202,7 @@ module.exports = {
         "188",
         "189",
         "190",
+        "191"
       ],
     },
   ],
